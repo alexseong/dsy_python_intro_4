@@ -79,16 +79,26 @@ Using atom text editor, open ./src/assignment_4.2.py and write your program.
             cwen@iupui.edu 5
 
 
-3. Write a program that prompts for a file name, then opens that file and reads through the file, looking for lines of the form:
+3. Write a program to read through the mbox-short.txt and figure out the distribution by hour of the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
 
-    X-DSPAM-Confidence:    0.8475
+    From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 
-Count these lines and extract the floating point values from each of the lines and compute the average of those values and produce an output as shown below. Do not use the sum() function or a variable named sum in your solution.
-You can download the sample data at [./data/pymbox-short.txt](https://github.com/alexseong/dsy_python_intro_3/blob/master/data/mbox-short.txt) when you are testing below enter mbox-short.txt as the file name.
+Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.
 
-Using atom text editor, open ./src/assignment_3.3.py and write your program.
+Using atom text editor, open ./src/assignment_4.3.py and write your program.
 <br>Compare your output with 'Desired Output'
 
     Desired Output: 
-            Average spam confidence: 0.750718518519
+            04 3
+            06 1
+            07 1
+            09 2
+            10 3
+            11 6
+            14 1
+            15 2
+            16 4
+            17 2
+            18 1
+            19 1
 
