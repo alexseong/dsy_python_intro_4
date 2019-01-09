@@ -69,14 +69,14 @@ Using atom text editor, open ./src/assignment_4.1.2.py and write your program.
         cwen@iupui.edu
         There were 27 lines in the file with From as the first word
 
-2. Write code using find() and string slicing to extract the number at the end of the line below. Convert the extracted value to a floating point number and print it out.
+2. Write a program to read through the mbox-short.txt and figure out who has the sent the greatest number of mail messages. The program looks for 'From ' lines and takes the second word of those lines as the person who sent the mail. The program creates a Python dictionary that maps the sender's mail address to a count of the number of times they appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop to find the most prolific committer.
 
-Using atom text editor, open ./src/assignment_3.2.py and write your program.
+Using atom text editor, open ./src/assignment_4.2.py and write your program.
 <br>Compare your output with 'Desired Output'
  
 
     Desired Output: 
-            0.8475
+            cwen@iupui.edu 5
 
 
 3. Write a program that prompts for a file name, then opens that file and reads through the file, looking for lines of the form:
