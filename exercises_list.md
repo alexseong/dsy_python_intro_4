@@ -26,7 +26,7 @@
 
 You will parse the From line and print out the second word for each From line, then you will also count the number of From (not From:) lines and print out a count at the end. This is a good sample output with a few lines removed:
 
-    python fromcount.py
+    python exercise4.1.5.py
     Enter a file name: mbox-short.txt
 
     stephen.marquard@uct.ac.za

@@ -6,163 +6,54 @@
 ### Lists are mutable
 The flow of while statement
 
+    >>> numbers = [17, 123]
+    >>> numbers[1] = 5
+    >>> print(numbers)
+* Any integer expression can be used as an index.
+* If you try to read or write an element that does not exist, you get an IndexError.
+* If an index has a negative value, it counts backward from the end of the list.
 
-### Infinite loops
+### Traversing a list
 
-    n = 10
-    while True:
-        print(n, end='')
-        n = n - 1
-    print('Done!')
+### List operations
 
-    while True:
-        line = input('> ')
-        if line == 'done':
-            break
-        print(line)
-    print('Done!')
+### List slices
 
-This way of writing while loops is common because you can check the condition anywhere in the loop (not just at the top) and you can express the stop condition affirmatively ("stop when this happens") rather than negatively ("keep going until that happens.").
+### List methods
 
-### Finishing iterations with continue
+### Deleting elements
 
-    while True:
-        line = input('> ')
-        if line[0] == '#':
-            continue
-        if line == 'done':
-            break
-        print(line)
-    print('Done!')
+### Lists and functions
 
-### Define loops using for
+### Lists and string
 
-The <b>for</b> loop is looping through a known set of items so it runs through as many iterations as there are items in the set
+### Parsing lines
 
-### Loop patterns
+### Objects ans values
 
-#### Continuing and summing loops
-    len()
-    sum()
+### Aliasing
 
-#### Maximum and minimum loops
-
-    def min(values):
-    smallest = None
-    for value in values:
-        if smallest is None or value < smallest:
-            smallest = value
-    return smallest
+### List arguments
 
 
-## [Exercises](./exercises_loop.md)
+## [Exercises](./exercises_list.md)
 
-## [Glossary](./glossary_loop.md)
-
-# Strings
-
-### A string is a sequence
-The index is an offset from the beginning of the string, and the offset of the first letter is zero.<br>
-The value of the index has to be an integer
-    
-### Getting the length of a string using len
-    len()
-
-To get the last letter
-
-    print(fruit[len(fruit) - 1])
-    print(fruit[-1])
-
-Negative indices count backward from the end of the string
-
-### Traversal through a string with a loop
-while loop and for loop
-
-### String slices
-If the first index is greater than or equal to the second the result is an empty string, represented by two quotation marks:
-
-### Strings are immutable
-You can't change an existing string. The best you can do is create a new string that is a variation on the original:
-
-    >>> greeting = 'Hello, world!'
-    >>> new_greeting = 'J' + greeting[1:]
-
-### Looping and counting
-
-### The in operator
-
-### String comparison
-
-### String methods
-Strigs are Python objects which cointain both data and methods.<br>
-dir() for available methods<br>
-
-    >>> stuff = 'Hello world'
-    >>> type(stuff)
-    >>> dir(stuff)
-    >>> help(stuff.capitalize)
-
-We call a method by appending the method name to the variable name using the period as a delimeter. A method call is called an invocation.
-
-    >>> word = 'banana '
-    >>> new_word = word.upper()
-    >>> index = word.find('a')
-    >>> word.strip()
-    >>> word.startwith('ba')
-    >>> 
-
-### Parcing strings
-
-### Format operator
-When the first operand is a string, % is the format operator.<br>
-The first operand is the format string, which contains one or more format sequences that specify how the second operand is formatted.<br>
-
-    %d
-    %g
-    %s
+## [Glossary](./glossary_list.md)
 
 
-## [Exercises](./exercises_string.md)
+# Dictionaries
 
-## [Glossary](./glossary_string.md)
+### Dictionary as a set of counters
 
-# FILES
+### Dictionaries and files
 
-## Opening files
-If the open is successful, the operating system returns us a file handle.
+### Looping and dictionaries
 
-## Text files and lines
-    data/mbox.txt
-    data/mbox_short.txt
+### Advanced text parsing
 
-## Reading files
-    fhand = open('filename')
-    for line in fhand:
-        # do something
-    
-    str = fhand.read()
 
-## Searching through a file
-    str_obj.rstrip()
-    str_obj.startwith('')
+## [Exercises](./exercises_dict.md)
 
-## Letting the user choose the file name
-    fname = input('Enter the file name: ')
-    fhandle = open(fname)
+## [Glossary](./glossary_dict.md)
 
-## Using try, except, and open
-more Pythonic way
-
-## Writing files
-    fout = open('output.txt', 'w')
-    line1 = "This is the first line.\n"
-    fout.write(line1)
-    fout.close()
-
-    
-
-## [Exercises](./exercises_file.md)
-
-## [Glossary](./glossary_file.md)
-
-# [Week 5 Assignments](assignment.md)
+# [Week 8 Assignments](assignment.md)
