@@ -15,17 +15,87 @@ The flow of while statement
 
 ### Traversing a list
 
+    for cheese in cheeses:
+    print(cheese)
+
+    for i in range(len(numbers)):
+        numbers[i] = numbers[i] * 2
+
 ### List operations
+The + operator concatenates lists<br>
+Similarly, the * operator repeats a list a given number of times
 
 ### List slices
+A slice operator on the left side of an assignment can update multiple elements
 
 ### List methods
 
+    >>> t = ['a', 'b', 'c']
+    >>> t.append('d')
+    >>> print(t)
+    ['a', 'b', 'c', 'd']
+
+    >>> t1 = ['a', 'b', 'c']
+    >>> t2 = ['d', 'e']
+    >>> t1.extend(t2)
+    >>> print(t1)
+    ['a', 'b', 'c', 'd', 'e']
+
+    >>> t = ['d', 'c', 'e', 'b', 'a']
+    >>> t.sort()
+    >>> print(t)
+    ['a', 'b', 'c', 'd', 'e']
+
 ### Deleting elements
+
+    >>> t = ['a', 'b', 'c']
+    >>> x = t.pop(1)
+    >>> print(t)
+    ['a', 'c']
+    >>> print(x)
+    b
+
+    >>> t = ['a', 'b', 'c']
+    >>> del t[1]
+    >>> print(t)
+    ['a', 'c']
+
+    >>> t = ['a', 'b', 'c']
+    >>> t.remove('b')
+    >>> print(t)
+    ['a', 'c']
+
 
 ### Lists and functions
 
+    numlist = list()
+    while (True):
+        inp = input('Enter a number: ')
+        if inp == 'done': break
+        value = float(inp)
+        numlist.append(value)
+
+    average = sum(numlist) / len(numlist)
+    print('Average:', average)
+
 ### Lists and string
+
+    >>> s = 'spam'
+    >>> t = list(s)
+    >>> print(t)
+    ['s', 'p', 'a', 'm']
+
+The list function breaks a string into individual letters. If you want to break a string into words, you can use the split method
+
+    >>> s = 'spam-spam-spam'
+    >>> delimiter = '-'
+    >>> s.split(delimiter)
+    ['spam', 'spam', 'spam']
+
+    >>> t = ['pining', 'for', 'the', 'fjords']
+    >>> delimiter = ' '
+    >>> delimiter.join(t)
+    'pining for the fjords'
 
 ### Parsing lines
 
