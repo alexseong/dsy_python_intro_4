@@ -99,11 +99,32 @@ The list function breaks a string into individual letters. If you want to break 
 
 ### Parsing lines
 
+    fhand = open('mbox-short.txt')
+    for line in fhand:
+        line = line.rstrip()
+        if not line.startswith('From '): continue
+        words = line.split()
+        print(words[2])
+
 ### Objects ans values
+
+    >>> a = 'banana'
+    >>> b = 'banana'
+    >>> a is b
+    True
+
+    >>> a = [1, 2, 3]
+    >>> b = [1, 2, 3]
+    >>> a is b
+    False
 
 ### Aliasing
 
+An object with more than one reference has more than one name, so we say that the object is aliased. <br>If the aliased object is mutable, changes made with one alias affect the other:
+
 ### List arguments
+
+When you pass a list to a function, the function gets a reference to the list. If the function modifies a list parameter, the caller sees the change. For example, delete_head removes the first element from a list:
 
 
 ## [Exercises](./exercises_list.md)
