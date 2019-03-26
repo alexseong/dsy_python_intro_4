@@ -1,0 +1,14 @@
+def chop(list):
+    #List = [1,2,3,4,5]
+    #List.remove(4)
+    #List = [1,2,3,5]
+    list.remove(list[0])
+    endNum = len(list) - 1
+    list.remove(list[endNum])
+    #List.remove(list[-1])
+
+
+
+list = [1,2,3,4,5,6,7,8]
+
+chop(list1)
