@@ -2,7 +2,7 @@ number = input('Enter a Number: ')
 if number == 'done':
     Break
 else:
-    number = input('Enter a Number: '
+    number = input('Enter a Number: ')
     nums = list(number)
     nums.append(number)
 print(min(number))
